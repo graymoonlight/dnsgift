@@ -1,0 +1,81 @@
+.main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchSection {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+.input {
+  padding: 8px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.categoryButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.priceRange {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.results {
+  width: 100%;
+  max-width: 800px;
+}
+
+.giftList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.giftCard {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.giftCard img {
+  max-width: 100%;
+  height: auto;
+}
+
+.giftCard h3 {
+  margin: 10px 0;
+}
+
+.giftCard p {
+  margin: 5px 0;
+}
+
+.giftCard a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.giftCard a:hover {
+  text-decoration: underline;
+}

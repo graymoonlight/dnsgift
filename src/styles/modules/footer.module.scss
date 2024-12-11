@@ -1,0 +1,52 @@
+
+.footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 1rem 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .copy {
+    font-size: 0.875rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.875rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: #ffffff;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: #ff6600;
+      }
+    }
+
+    .icon {
+      transition: color 0.3s ease;
+    }
+  }
+}
