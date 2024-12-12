@@ -1,81 +1,33 @@
-.main {
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.page-section {
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.searchSection {
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
+.page-header {
+  font-size: 28px;
+  font-weight: bold;
   text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.inputGroup {
-  margin-bottom: 15px;
-}
-
-.input {
-  padding: 8px;
-  width: 100%;
-  max-width: 100%;
-}
-
-.categoryButtons {
+.flex-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.button {
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.priceRange {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.results {
-  width: 100%;
-  max-width: 800px;
-}
-
-.giftList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
   gap: 20px;
 }
 
-.giftCard {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-.giftCard img {
-  max-width: 100%;
-  height: auto;
-}
-
-.giftCard h3 {
-  margin: 10px 0;
-}
-
-.giftCard p {
-  margin: 5px 0;
-}
-
-.giftCard a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.giftCard a:hover {
-  text-decoration: underline;
-}
