@@ -6,25 +6,11 @@ import { searchProducts } from '@/api/api';
 
 const SearchModule = () => {
   const [query, setQuery] = useState('');
-  const [keywords, setKeywords] = useState<string[]>([]);
   const [results, setResults] = useState<any[]>([]);
-
-  const extractKeywords = (text: string): string[] => {
-    const stopWords = ['и', 'в', 'на', 'с', 'по', 'для', 'о', 'это', 'то'];
-    const words = text
-      .toLowerCase()
-      .split(/\s+/)
-      .filter((word) => word.length > 2 && !stopWords.includes(word));
-
-    return [...new Set(words)];
-  };
 
   const handleSearch = async () => {
     try {
-      const extractedKeywords = extractKeywords(query);
-      setKeywords(extractedKeywords);
-
-      const data = await searchProducts(extractedKeywords);
+      const data = await searchProducts(query);
       setResults(data);
     } catch (error) {
       console.error('Ошибка поиска:', error);
@@ -49,8 +35,12 @@ const SearchModule = () => {
         <div className={styles.results}>
           <h3>Результаты поиска:</h3>
           <ul>
-            {results.map((item, index) => (
-              <li key={index}>{item.name}</li>
+            {results.map((item) => (
+              <li key={item.id}>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  Ссылка на подарок {item.categoryId}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
@@ -60,3 +50,4 @@ const SearchModule = () => {
 };
 
 export default SearchModule;
+

@@ -1,19 +1,13 @@
-import axios from "axios";
+import axios from 'axios';
 
-const apiClient = axios.create({
-  baseURL: "/api",
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-
-
-export const searchProducts = async (keywords: string[]): Promise<any[]> => {
+export const searchProducts = async (query: string): Promise<any[]> => {
   try {
-    const response = await apiClient.post("/search", { keywords });
+    const response = await axios.post('http://localhost:5000/categories/search', {
+      query,
+    });
     return response.data;
-  } catch (error: any) {
-    console.error("Ошибка поиска:", error.message);
-    throw new Error("Не удалось выполнить поиск товаров.");
+  } catch (error) {
+    console.error('Ошибка при запросе к API:', error);
+    throw error;
   }
 };
